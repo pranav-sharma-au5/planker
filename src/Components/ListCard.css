@@ -1,0 +1,10 @@
+.checklist-status {
+  display: flex;
+  align-items: flex-end;
+  padding: 0.3rem 0.3rem 0.3rem 0;
+}
+
+.card-status {
+  display: flex;
+  align-items: flex-end;
+}

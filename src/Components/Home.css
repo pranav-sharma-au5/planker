@@ -1,0 +1,250 @@
+.banner {
+  height: 150px;
+  width: 100%;
+  background: rgb(60, 157, 206);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #5B86E5, #36D1DC);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgb(58, 103, 199), rgb(96, 191, 238));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+  flex: 1;
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  background-color: rgb(247, 247, 247);
+  justify-content: flex-end;
+}
+
+.main-area {
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  background-color: rgb(255, 255, 255);
+}
+
+.home-list {
+  flex-basis: 60%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.home-list li {
+  padding: 0.5rem;
+  font-size: smaller;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.teams {
+  font-size: 17px;
+  padding-top: 0.5rem;
+}
+
+.teams:hover {
+  background-color: rgb(247, 247, 247)!important;
+}
+
+.list-icon {
+  flex-grow: 1;
+}
+
+.listItem-title {
+  flex-grow: 10;
+}
+
+.dashboard {
+  font-size: smaller;
+}
+
+.home-list li:hover {
+  background-color: rgb(221, 221, 221);
+}
+
+.personal-boards {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  width: 100%;
+}
+
+.personal-boards-heading {
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.person-icon {
+  margin-right: 0.5rem;
+}
+
+.one-user-board {
+  cursor: pointer;
+  flex-basis: 19%;
+  height: 130px;
+  margin: 1rem 0.6rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.user-boards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.create-user-board {
+  cursor: pointer;
+  background-color: rgb(226, 226, 226);
+  flex-basis: 19%;
+  height: 130px;
+  margin: 1rem 0.6rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(100, 146, 177);
+}
+
+.create-user-board:hover {
+  background-color: rgb(216, 216, 216);
+}
+
+.create-board-modal {
+  height: 20vh;
+  width: 30vw;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  outline: none!important;
+}
+
+.board-and-background {
+  display: flex;
+  flex: 4
+}
+
+.new-board {
+  flex: 2.5;
+  background-color: white;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: 50%;
+  filter: brightness(80%);
+}
+
+.board-background {
+  flex-wrap: wrap;
+  flex: 1;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+
+.board-select-background-container {
+  flex-basis: 30%;
+  display: flex;
+  position: relative;
+}
+
+.board-select-background {
+  /* margin-top: 0.1rem; */
+  height: 30px;
+  width: 90%;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  filter: brightness(70%);
+}
+
+.add-board-button-container {
+  position: relative;
+  margin-top: 0.5rem;
+  flex: 1
+}
+
+.darken-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: white;
+}
+
+.darken-background h5 {
+  text-decoration: none;
+}
+
+.tick-background {
+  font-size: medium!important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+
+.delete-board {
+  position: absolute;
+  transform: scale(0.8);
+  right: -0.2rem;
+  top: -0.2rem;
+  z-index: 10;
+  padding: 0.2rem;
+  display: none;
+}
+
+.one-user-board:hover .delete-board {
+  display: inline;
+}
+
+.white {
+  color: white;
+}
+
+#boardName-textfield {
+  background-color: rgba(255, 255, 255, 0.741);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+}
+
+.new-board .MuiOutlinedInput-root:hover {
+  border: none!important;
+  outline: none!important;
+}
+
+/* MuiInputBase-root  MuiInputBase-formControl MuiInputBase-marginDense MuiOutlinedInput-marginDense */

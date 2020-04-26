@@ -1,0 +1,34 @@
+.invite-card {
+  height: 40vh;
+  width: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invite-card-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.invite-link {
+  word-break: break-all;
+  white-space: pre-line;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.hidden-textarea-invite {
+  opacity: 0;
+  position: absolute;
+}
+
+.planker-navbar {
+  color: white;
+}
+
+.logout-button {
+  margin-left: 0.5rem!important;
+}

@@ -1,0 +1,122 @@
+.modal-div {
+  min-height: 80vh;
+  width: 50vw;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 0.6rem 0;
+}
+
+.modal-div:focus {
+  outline: none;
+}
+
+.card-options {
+  margin-left: 2rem;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
+.modal-add-option {
+  padding: .3rem;
+}
+
+.modal-add-option-paper {
+  padding: 0.3rem;
+}
+
+.list-item {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.list-item fieldset {
+  opacity: 0;
+}
+
+.list-item:focus-within fieldset {
+  opacity: 1;
+}
+
+.modal-div::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+.modal-div::-webkit-scrollbar-thumb {
+  background-color: #666565;
+  outline: 1px solid slategrey;
+  border-radius: 500px;
+  border-right: 2px solid white;
+}
+
+.modal-div::-webkit-scrollbar-button {
+  display: none;
+}
+
+.member-fullname {
+  display: none;
+  position: absolute;
+}
+
+.delete-member {
+  position: absolute;
+  transform: scale(0.8);
+  top: -0.5rem;
+  left: 0.3rem;
+}
+
+.card-member {
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-members:hover .member-fullname {
+  display: inline;
+}
+
+.label-fullname {
+  display: none;
+  position: absolute;
+}
+
+.delete-label {
+  position: absolute;
+  transform: scale(0.8);
+  top: -0.6rem;
+  left: 0.5rem;
+}
+
+.card-label {
+  margin: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-labels:hover .label-fullname {
+  display: inline;
+}
+
+.card-checklist {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 65%;
+}
+
+.delete-task {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  transform: scale(0.8);
+}
