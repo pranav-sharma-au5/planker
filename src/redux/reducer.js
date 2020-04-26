@@ -25,7 +25,7 @@ export default function appReducer(state = initialState, action) {
     }
     case "invite": {
       const inviteToken = action.payload.token
-      stateCopy.board.invite = `http://localhost:3000/invite/${inviteToken}`
+      stateCopy.board.invite = `https://planker.netlify.app/invite/${inviteToken}`
       return stateCopy
     }
     case "clearInvite": {
