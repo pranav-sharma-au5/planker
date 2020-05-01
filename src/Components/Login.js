@@ -40,11 +40,11 @@ const Login = ({ login, location }) => {
         </Typography>
         <form className="login-form" onSubmit={handleSubmit} >
           <div className="input-group" >
-            <TextField fullWidth onChange={setEmail} value={email} label="Email" variant="outlined" />
+            <TextField fullWidth inputProps={{ type: "email", required: true }} onChange={setEmail} value={email} label="Email" variant="outlined" />
           </div>
           <div className="input-group">
 
-            <TextField fullWidth inputProps={{ type: "password" }} onChange={setPassword} value={password} label="Password" variant="outlined" />
+            <TextField fullWidth inputProps={{ type: "password", required: true }} onChange={setPassword} value={password} label="Password" variant="outlined" />
           </div>
           <div className="submit-container">
             <Button variant="contained" type="submit" color="primary"  >

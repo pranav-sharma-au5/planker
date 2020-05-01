@@ -7,6 +7,7 @@ const initialState = {
   boardMembers: [],
   boardLabels: [],
   update: true,
+  loading: false
 }
 
 export default function appReducer(state = initialState, action) {
