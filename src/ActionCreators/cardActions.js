@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export function changeCardDetails(card, listIndex, cardId) {
-  const req = axios.put(`https://planker-be.herokuapp.com/cards/${cardId}`, { card }, { withCredentials: true })
+  const req = axios.put(`https://b964a9902209.ngrok.io/cards/${cardId}`, { card }, { withCredentials: true })
 
   return {
     type: "changeCardDetails",
@@ -17,7 +17,7 @@ export function deleteCard(index, listIndex) {
 }
 
 export function deleteCardAPI(index, listId, cardId) {
-  const req = axios.delete(`https://planker-be.herokuapp.com/cards`, { params: { index, listId, cardId }, withCredentials: true })
+  const req = axios.delete(`https://b964a9902209.ngrok.io/cards`, { params: { index, listId, cardId }, withCredentials: true })
 
   return req
 }
@@ -28,14 +28,14 @@ export function addCard(title, listId) {
 
 }
 export function addCardAPI(title, listId, index) {
-  const req = axios.post("https://planker-be.herokuapp.com/cards", { title, listId, index }, { withCredentials: true })
+  const req = axios.post("https://b964a9902209.ngrok.io/cards", { title, listId, index }, { withCredentials: true })
 
   return req
 
 }
 
 export function getCards(listId) {
-  const req = axios.get(`https://planker-be.herokuapp.com/cards/${listId}`, { withCredentials: true })
+  const req = axios.get(`https://b964a9902209.ngrok.io/cards/${listId}`, { withCredentials: true })
 
   return (dispatch) => {
     req.then(cards => {
