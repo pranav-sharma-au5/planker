@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 export function changeListName(value, index, listId) {
-  const req = axios.put(`https://b964a9902209.ngrok.io/lists/${listId}`, { value, index }, { withCredentials: true })
+  const req = axios.put(`https://planker-be.herokuapp.com/lists/${listId}`, { value, index }, { withCredentials: true })
   return {
     type: "changeListName",
     payload: { value, index }
@@ -16,12 +16,12 @@ export function deleteList(index) {
   }
 }
 export function deleteListAPI(listId, boardId, index) {
-  const req = axios.delete(`https://b964a9902209.ngrok.io/lists`, { params: { listId, boardId, index }, withCredentials: true })
+  const req = axios.delete(`https://planker-be.herokuapp.com/lists`, { params: { listId, boardId, index }, withCredentials: true })
 
   return req
 }
 export function getLists(boardId) {
-  const req = axios.get(`https://b964a9902209.ngrok.io/lists/${boardId}`, { withCredentials: true })
+  const req = axios.get(`https://planker-be.herokuapp.com/lists/${boardId}`, { withCredentials: true })
   return (dispatch) => {
     req.then(lists => {
       console.log(lists, "getLists")
@@ -37,7 +37,7 @@ export function addList(title, boardId, index) {
 
 }
 export function addListAPI(title, boardId, index) {
-  const req = axios.post("https://b964a9902209.ngrok.io/lists", { title, boardId, index }, { withCredentials: true })
+  const req = axios.post("https://planker-be.herokuapp.com/lists", { title, boardId, index }, { withCredentials: true })
 
   return req
 
@@ -49,7 +49,7 @@ export function getInviteLink(boardId) {
       type: "clearInvite"
     }
   }
-  const req = axios.get(`https://b964a9902209.ngrok.io/invite/${boardId}`, { withCredentials: true })
+  const req = axios.get(`https://planker-be.herokuapp.com/invite/${boardId}`, { withCredentials: true })
   return (dispatch) => {
     req.then(invite => {
       dispatch({

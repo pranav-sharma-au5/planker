@@ -55,16 +55,16 @@ export function sortAPI(
   }
 
   if (draggableId[0] === "c") {//for cards
-    return axios.put("https://b964a9902209.ngrok.io/drag/cards", payload, { withCredentials: true })
+    return axios.put("https://planker-be.herokuapp.com/drag/cards", payload, { withCredentials: true })
   }
   else {
-    return axios.put("https://b964a9902209.ngrok.io/drag/lists", payload, { withCredentials: true })
+    return axios.put("https://planker-be.herokuapp.com/drag/lists", payload, { withCredentials: true })
   }
 }
 
 export function addBoard(title, backgroundUrl) {
 
-  const req = axios.post("https://b964a9902209.ngrok.io/boards", { title, backgroundUrl }, { withCredentials: true })
+  const req = axios.post("https://planker-be.herokuapp.com/boards", { title, backgroundUrl }, { withCredentials: true })
 
   return (dispatch) => {
     req.then(boards => {
@@ -75,7 +75,7 @@ export function addBoard(title, backgroundUrl) {
 }
 export function signup(email, password, name, boardToken) {
 
-  const req = axios.post("https://b964a9902209.ngrok.io/users/signup", { email, password, name: titleCase(name), boardToken }, { withCredentials: true })
+  const req = axios.post("https://planker-be.herokuapp.com/users/signup", { email, password, name: titleCase(name), boardToken }, { withCredentials: true })
 
   return (dispatch) => {
     req.then(done => {
@@ -87,7 +87,7 @@ export function signup(email, password, name, boardToken) {
 
 export function login(email, password, boardToken) {
 
-  const req = axios.post("https://b964a9902209.ngrok.io/users", { email, password, boardToken }, { withCredentials: true })
+  const req = axios.post("https://planker-be.herokuapp.com/users", { email, password, boardToken }, { withCredentials: true })
   console.log("logging in")
   return (dispatch) => {
     req.then(done => {
@@ -97,7 +97,7 @@ export function login(email, password, boardToken) {
 }
 export function checkToken(boardToken) {
   console.log("check token request")
-  const req = axios.post("https://b964a9902209.ngrok.io/login", { boardToken }, { withCredentials: true })
+  const req = axios.post("https://planker-be.herokuapp.com/login", { boardToken }, { withCredentials: true })
   return (dispatch) => {
     req.then(res => {
       console.log(res)
@@ -117,7 +117,7 @@ export function checkToken(boardToken) {
 
 export function getBoards() {
 
-  const req = axios.get("https://b964a9902209.ngrok.io/boards", { withCredentials: true })
+  const req = axios.get("https://planker-be.herokuapp.com/boards", { withCredentials: true })
   return (dispatch) => {
     req.then(boards => {
       console.log(boards.data)
@@ -127,13 +127,13 @@ export function getBoards() {
 }
 export function deleteBoard(boardId) {
 
-  const req = axios.delete(`https://b964a9902209.ngrok.io/boards/${boardId}`, { withCredentials: true })
+  const req = axios.delete(`https://planker-be.herokuapp.com/boards/${boardId}`, { withCredentials: true })
   return req
 }
 
 
 export function getBoard(boardId) {
-  const req = axios.get(`https://b964a9902209.ngrok.io/boards/${boardId}`, { withCredentials: true })
+  const req = axios.get(`https://planker-be.herokuapp.com/boards/${boardId}`, { withCredentials: true })
   return (dispatch) => {
     req.then(board => {
       dispatch({
@@ -145,7 +145,7 @@ export function getBoard(boardId) {
 }
 
 export function setBgAPI(boardId, backgroundUrl) {
-  const req = axios.post(`https://b964a9902209.ngrok.io/boards/${boardId}`, { backgroundUrl }, { withCredentials: true })
+  const req = axios.post(`https://planker-be.herokuapp.com/boards/${boardId}`, { backgroundUrl }, { withCredentials: true })
   return req
 }
 
